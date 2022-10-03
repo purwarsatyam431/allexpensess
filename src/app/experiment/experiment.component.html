@@ -1,0 +1,71 @@
+<p>experiment works!</p>
+<div class="container">
+    <div class="row">
+    <div class="col-sm-4">
+<!-- <i class="fa fa-solid fa fa-thumbs-up" style=" font-size: 40px;
+"   [ngStyle]="{color: likecolor}"></i> &nbsp;
+<i class="fa fa-thumbs-up unactive"
+[ngStyle]="{color: defaultcolor}"
+></i>
+
+&nbsp;
+<i class="fa fa-solid fa fa-thumbs-down"    [ngStyle]="{color: likecolor}"></i> &nbsp;
+<i class="fa fa-thumbs-down unactive"
+[ngStyle]="{color: defaultcolor}"
+></i> -->
+<div class="creator-tabs">
+    <ul class="nav nav-pills creator-tabspills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="contollers-btn f-12 lh-130 nav-link"
+                [ngClass]="{'fw-600 active': isLikeFontBold}" id="pills-like-tab"
+                data-bs-toggle="pill" data-bs-target="#pills-like" type="button" role="tab"
+                aria-controls="pills-like" aria-selected="true"
+                (click)="isLikeFontBold = !isLikeFontBold;isdisLikeFontBold = !isdisLikeFontBold">
+            Like
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="contollers-btn f-12 fw-600 lh-130 nav-link"
+                [ngClass]="{'fw-600 active': isdisLikeFontBold}" id="pills-dislike-tab"
+                data-bs-toggle="pill" data-bs-target="#pills-dislike" type="button" role="tab"
+                aria-controls="pills-profile" aria-selected="false"
+                (click)="isdisLikeFontBold = !isdisLikeFontBold;isLikeFontBold = !isLikeFontBold">
+            Dislike
+            </button>
+        </li>
+    </ul>
+    <!-- like Page -->
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-like" role="tabpanel"
+            aria-labelledby="pills-like-tab">
+            <div class="row designProperties-window co-black1 p-3">
+                <mat-icon style=" font-size: 40px;"
+                [style.color]="item.canvasKey.optionSelectedforlike ? item.selectBgClr: item.unselectBgClr" (click)="item.canvasKey.optionSelectedforlike= !item.canvasKey.optionSelectedforlike">thumb_up</mat-icon>&nbsp;&nbsp;&nbsp;
+</div>
+</div>
+
+<!-- dislike page -->
+<div class="tab-pane fade show active" id="pills-dislike" role="tabpanel"
+aria-labelledby="pills-dislike-tab">
+<div class="row designProperties-window co-black1 p-3">
+    <mat-icon style=" font-size: 40px;
+    " [style.color]="item.canvasKey.optionSelectedfordislike ? item.selectBgClr: item.unselectBgClr" (click)="item.canvasKey.optionSelectedfordislike= !item.canvasKey.optionSelectedfordislike">thumb_down</mat-icon>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="col-sm-4 mt-5">
+Like color:<input type="color" [(ngModel)]="item.selectBgClr">
+<br>
+Default color:<input type="color" [(ngModel)]="item.unselectBgClr">
+</div>
+</div>
+</div>
+
+
+
