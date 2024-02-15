@@ -24,6 +24,8 @@
     "@fullcalendar/daygrid": "^5.11.3",
     "@fullcalendar/interaction": "^5.11.3",
     "@fullcalendar/list": "^5.11.3",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "bootstrap": "^5.2.1",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.5.0",

@@ -3,14 +3,21 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 import { FormControl, FormGroup } from '@angular/forms';
 import { ApiserviceService } from './shared/shared/apiservice.service';
 import { map } from 'rxjs/operators';
-
+import {TranslateService} from "@ngx-translate/core";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private service:ApiserviceService){}
+
+  constructor(private translate: TranslateService,private service:ApiserviceService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
 ngOnInit(): void {
 this.fetchwasteData()
 this.fetchData()
@@ -32,6 +39,7 @@ this.fetchData()
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      console.log(event.container)
     } else {
       transferArrayItem(
         event.previousContainer.data,
@@ -39,6 +47,7 @@ this.fetchData()
         event.previousIndex,
         event.currentIndex,
       );
+      console.log(event.container)
     }
   }
   postexpenses(){

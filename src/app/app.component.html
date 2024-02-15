@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<!-- <div class="container mt-3">
   <form [formGroup]="form">
   <div class="row">
     <div class="col-md-6">
@@ -50,8 +50,13 @@
     </div>
   </div>
   
+</div> -->
+<button (click)="useLanguage('hindi')">de</button>
+<button (click)="useLanguage('en')">en</button>
+<div>
+  <h1>Translation demo</h1>
+  <p>This is a simple demonstration app for ngx-translate</p>
+  {{'name'|translate}}
 </div>
-
-
-<!-- <app-experiment></app-experiment> -->
+<app-experiment></app-experiment>
 <!-- <app-calender></app-calender> -->
