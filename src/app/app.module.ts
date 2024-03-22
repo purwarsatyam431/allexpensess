@@ -22,7 +22,7 @@ FullCalendarModule.registerPlugins([
 @NgModule({
   declarations: [
     AppComponent,
-    ExperimentComponent,CalenderComponent
+    ExperimentComponent,CalenderComponent,
   ],
   imports: [
     BrowserModule,
